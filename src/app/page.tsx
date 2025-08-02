@@ -1,20 +1,32 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
+  const { isLoggedIn} = useAuth();
+   const router = useRouter();
   return (
-    <>
+    <main className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="container mx-auto flex flex-col items-center justify-center text-center py-20 min-h-[calc(100vh-80px)]">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+        <h1 className="text-4xl dark:text-gray-100 text-gray-900 md:text-6xl font-extrabold tracking-tight">
           Take control of your finances with clarity and ease
         </h1>
-        <p className="mt-4 max-w-3xl text-lg md:text-xl text-muted-foreground">
+        <p className="mt-4 max-w-3xl dark:text-gray-400 text-gray-500 text-lg md:text-xl ">
           BudgetWise is your simple tool to track daily expenses and truly
           understand where your money goes.
         </p>
-        <Button size="lg" className="mt-8 bg-blue-600" asChild>
+        <Button  onClick={() => {
+    if (isLoggedIn) {
+      router.push("/dashboard");
+    } else {
+      router.push("/auth/login");
+    }
+  }} size="lg" className="mt-8 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600" asChild>
           <Link href="/register">Get Started for Free</Link>
         </Button>
       </section>
@@ -145,6 +157,6 @@ export default function Home() {
 
   </div>
 </section>
-    </>
+    </main>
   );
 }
