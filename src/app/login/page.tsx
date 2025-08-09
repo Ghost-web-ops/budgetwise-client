@@ -102,7 +102,7 @@ export default function Login() {
               <div className="w-full border-t border-gray-300 dark:border-gray-700" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="px-2 bg-card text-muted-foreground">
+              <span className="px-2 bg-card text-muted-foreground dark:bg-gray-700">
                 Or continue with
               </span>
             </div>
