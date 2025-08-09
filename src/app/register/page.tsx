@@ -41,7 +41,7 @@ export default function RegisterPage() {
     e.preventDefault();
     try {
       // 👇 The fix is here 👇
-      const response = await axios.post(`${apiUrl}/api/register`, {
+      const response = await axios.post(`${apiUrl}/api/auth/register`, {
         username,
         email,
         password,
