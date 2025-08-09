@@ -187,7 +187,7 @@ export default function Dashboard() {
         your data.
       </p>
       <div className="flex justify-center mt-10">
-        <Card className="w-full max-w-md dark:bg-gray-700 shadow-lg">
+        <Card className="w-full max-w-md dark:bg-gray-900 shadow-lg">
           <CardHeader>
             <CardTitle>Add New Expense</CardTitle>
           </CardHeader>
