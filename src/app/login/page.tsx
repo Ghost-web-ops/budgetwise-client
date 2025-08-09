@@ -48,8 +48,8 @@ export default function Login() {
   };
 
   return (
-    <section className="flex justify-center bg-white dark:bg-gray-700 border-gray-300  items-center min-h-[calc(100vh-150px)]">
-      <Card className="w-full max-w-md ">
+    <section className="flex justify-center bg-white dark:bg-gray-900 border-gray-300  items-center min-h-[calc(100vh-150px)]">
+      <Card className="w-full max-w-md dark:bg-gray-700 ">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
             Login{" "}
