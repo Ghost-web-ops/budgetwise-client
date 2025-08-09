@@ -63,7 +63,7 @@ export default function RegisterPage() {
     }
   };
   return (
-    <section className="flex justify-center my-6 items-center dark:bg-gray-900 dark:bg-gray-900 bg-white border-gray-300 min-h-[calc(100vh-150px)]">
+    <section className="flex justify-center my-6 items-center dark:bg-gray-900  bg-white border-gray-300 min-h-[calc(100vh-150px)]">
       <Card className="w-full max-w-md flex dark:bg-gray-700 border-gray-600">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
